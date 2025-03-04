@@ -7,12 +7,12 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="assets/css/style.css"/>
   <style>
-    /* For the 3D cube container */
+    /* 3D Cube container */
     .cube-container {
       perspective: 1000px;
       width: 400px;
       height: 400px;
-      margin: 100px auto; /* center on page */
+      margin: 100px auto 150px auto; /* extra bottom margin */
       position: relative;
     }
 
@@ -24,7 +24,6 @@
       transition: transform 1s;
     }
 
-    /* Each face of the cube */
     .face {
       position: absolute;
       width: 400px;
@@ -33,10 +32,9 @@
       border: 2px solid #ccc;
       box-sizing: border-box;
       padding: 20px;
-      text-align: center;
+      overflow-y: auto;
     }
 
-    /* Center face content nicely */
     .face h2 {
       margin-bottom: 10px;
     }
@@ -46,7 +44,6 @@
       text-align: left;
     }
 
-    /* Positions for each face */
     .face-front {
       transform: translateZ(200px);
     }
@@ -66,7 +63,6 @@
       transform: rotateX(-90deg) translateZ(200px);
     }
 
-    /* Buttons to rotate the cube */
     .controls {
       text-align: center;
       margin-top: 20px;
@@ -75,8 +71,6 @@
       margin: 0 10px;
       padding: 10px 20px;
     }
-
-    /* Fix the navbar at top */
     .navbar.fixed-top {
       top: 0;
       left: 0;
@@ -109,7 +103,7 @@
   <div class="container">
     <h1 class="mt-4 text-center">Impact of Graph Theory</h1>
     <p class="text-center">
-      Rotate the 3D cube to learn more about how graph theory shapes society, culture, and the economy.
+      Use the buttons below to rotate the cube and see how graph theory helps our society, culture, and economy.
     </p>
 
     <!-- 3D Cube Container -->
@@ -119,53 +113,48 @@
         <div class="face face-front">
           <h2>Social Connectivity</h2>
           <p>
-            Social networks (like Facebook, Twitter) are massive graphs. They let ideas spread quickly, connect people worldwide, and influence social movements. 
-            However, they can also create echo chambers or privacy concerns.
+            Graph theory helps social media show how people are connected. It makes the idea of "six degrees of separation" real.
+            This can help spread ideas fast. But it can also create groups that only talk to each other.
           </p>
         </div>
-
         <!-- Face 2: Knowledge Sharing -->
         <div class="face face-right">
           <h2>Knowledge Sharing</h2>
           <p>
-            The World Wide Web is a giant directed graph. Algorithms like PageRank revolutionized information discovery. 
-            This democratization of knowledge powers the modern information economy but also raises challenges about information overload and misinformation.
+            The web is a huge graph of pages. Graph algorithms like PageRank help find the best pages.
+            This makes it easy for everyone to learn new things and share knowledge.
           </p>
         </div>
-
         <!-- Face 3: Economic Optimization -->
         <div class="face face-back">
           <h2>Economic Optimization</h2>
           <p>
-            Companies use graph algorithms to optimize logistics, saving costs and resources. 
-            UPS’s ORION system, for example, cuts millions of driving miles. Graph-based supply chain models keep goods flowing efficiently around the globe.
+            Companies use graph math to plan routes and save fuel. For example, delivery systems can cut millions of miles.
+            This saves money and helps the environment.
           </p>
         </div>
-
         <!-- Face 4: Scientific Progress -->
         <div class="face face-left">
           <h2>Scientific Progress</h2>
           <p>
-            Citation networks and collaboration graphs help scientists track breakthroughs and identify key innovators. 
-            Graph-based analytics guide research funding, highlight influential papers, and foster interdisciplinary work.
+            Graphs help scientists see how ideas spread. They use citation graphs to know which research is very important.
+            This guides funding and helps new discoveries.
           </p>
         </div>
-
         <!-- Face 5: Global Connectivity & Inequality -->
         <div class="face face-top">
           <h2>Global Connectivity &amp; Inequality</h2>
           <p>
-            Graph theory highlights which regions or communities are poorly connected, guiding infrastructure improvements. 
-            Yet, it also reveals digital divides: some parts of the world lack strong network links, causing gaps in opportunities.
+            Graphs show which areas of the world are well connected and which are not.
+            This helps plan new roads or internet networks, but also shows digital divides.
           </p>
         </div>
-
-        <!-- Face 6: Negative Impacts &amp; Cautions -->
+        <!-- Face 6: Negative Impacts & Cautions -->
         <div class="face face-bottom">
           <h2>Negative Impacts &amp; Cautions</h2>
           <p>
-            Graph-based analytics can be misused for surveillance or manipulative data mining (e.g., Cambridge Analytica scandal). 
-            Ethical guidelines stress privacy, fairness, and transparency to prevent harm and protect rights.
+            The same tools that connect us can be misused. For example, data from social graphs can be used to spy on people.
+            It is important to use graph analysis in fair and safe ways.
           </p>
         </div>
       </div>
@@ -183,27 +172,27 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>
     const cube = document.getElementById('impactCube');
-    let faceIndex = 0; // 0=front,1=right,2=back,3=left,4=top,5=bottom
+    let faceIndex = 0; // 0=front, 1=right, 2=back, 3=left, 4=top, 5=bottom
 
     function rotateCubeToFace(index) {
       let xAngle = 0, yAngle = 0;
       switch(index) {
-        case 0: // front
+        case 0:
           xAngle = 0; yAngle = 0;
           break;
-        case 1: // right
+        case 1:
           xAngle = 0; yAngle = -90;
           break;
-        case 2: // back
+        case 2:
           xAngle = 0; yAngle = -180;
           break;
-        case 3: // left
+        case 3:
           xAngle = 0; yAngle = 90;
           break;
-        case 4: // top
+        case 4:
           xAngle = -90; yAngle = 0;
           break;
-        case 5: // bottom
+        case 5:
           xAngle = 90; yAngle = 0;
           break;
       }

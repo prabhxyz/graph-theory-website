@@ -5,8 +5,10 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* Extra space at the bottom of every page */
 .container {
   max-width: 900px;
+  margin-bottom: 100px;
 }
 
 /* Interactive D3 Graph styling (used on index.html) */

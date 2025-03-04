@@ -6,6 +6,19 @@
   <title>Graph Theory – Careers</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="assets/css/style.css"/>
+  <style>
+    .career-card {
+      cursor: pointer;
+      transition: transform 0.2s;
+      margin-bottom: 20px;
+    }
+    .career-card:hover {
+      transform: scale(1.03);
+    }
+    .career-grid {
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
   <!-- Fixed Navigation Bar -->
@@ -29,167 +42,182 @@
   </nav>
 
   <div class="container mt-4">
-    <h1>Careers Using Graph Theory</h1>
-    <p>Here are some jobs that rely on graph theory, with a brief look at what they do and typical education paths.</p>
-
-    <div class="accordion" id="careersAccordion">
-      <div class="card">
-        <div class="card-header" id="careerHeadingOne">
-          <h2 class="mb-0">
-            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#careerCollapseOne">
-              Graph Theory Researcher / Mathematician
-            </button>
-          </h2>
-        </div>
-        <div id="careerCollapseOne" class="collapse show" data-parent="#careersAccordion">
+    <h1>Graph Theory Careers</h1>
+    <p>Click on a career to see more details, like job title, salary, education, and job description.</p>
+    <div class="row career-grid">
+      <!-- Career 1: Graph Theory Researcher -->
+      <div class="col-md-4">
+        <div class="card career-card" data-toggle="modal" data-target="#careerModal1">
           <div class="card-body">
-            These academics prove new theorems about graphs and teach at universities or research labs.
-            A PhD in mathematics or computer science is common.
+            <h5 class="card-title">Graph Theory Researcher</h5>
+            <p class="card-text">Work in universities and labs studying graphs.</p>
           </div>
         </div>
       </div>
-
-      <div class="card">
-        <div class="card-header" id="careerHeadingTwo">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#careerCollapseTwo">
-              Software Engineer (Algorithms)
-            </button>
-          </h2>
-        </div>
-        <div id="careerCollapseTwo" class="collapse" data-parent="#careersAccordion">
+      <!-- Career 2: Software Engineer (Algorithms) -->
+      <div class="col-md-4">
+        <div class="card career-card" data-toggle="modal" data-target="#careerModal2">
           <div class="card-body">
-            Implementing features like route planning, social network tools, or search requires graph algorithms.
-            A bachelor's in CS is typical; advanced roles may need a master's or higher.
+            <h5 class="card-title">Software Engineer</h5>
+            <p class="card-text">Design and build systems using graph algorithms.</p>
           </div>
         </div>
       </div>
-
-      <div class="card">
-        <div class="card-header" id="careerHeadingThree">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#careerCollapseThree">
-              Data Scientist / Network Analyst
-            </button>
-          </h2>
-        </div>
-        <div id="careerCollapseThree" class="collapse" data-parent="#careersAccordion">
+      <!-- Career 3: Data Scientist / Network Analyst -->
+      <div class="col-md-4">
+        <div class="card career-card" data-toggle="modal" data-target="#careerModal3">
           <div class="card-body">
-            Analyzing social networks, transaction graphs, or large-scale data often involves graph metrics and tools (like NetworkX or Neo4j).
-            A background in CS, math, or stats is typical, with strong data analysis skills.
+            <h5 class="card-title">Data Scientist</h5>
+            <p class="card-text">Analyze networks and big data with graph tools.</p>
           </div>
         </div>
       </div>
-
-      <div class="card">
-        <div class="card-header" id="careerHeadingFour">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#careerCollapseFour">
-              Machine Learning Engineer / AI Researcher
-            </button>
-          </h2>
-        </div>
-        <div id="careerCollapseFour" class="collapse" data-parent="#careersAccordion">
+      <!-- Career 4: Machine Learning Engineer (GNN) -->
+      <div class="col-md-4">
+        <div class="card career-card" data-toggle="modal" data-target="#careerModal4">
           <div class="card-body">
-            Specializing in Graph Neural Networks or graph-based ML, these roles need strong AI fundamentals (master’s or PhD).
-            They develop new models for recommendations, drug discovery, or fraud detection.
+            <h5 class="card-title">ML Engineer (GNN)</h5>
+            <p class="card-text">Use graph neural networks for smart AI systems.</p>
           </div>
         </div>
       </div>
-
-      <div class="card">
-        <div class="card-header" id="careerHeadingFive">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#careerCollapseFive">
-              Network Engineer / Architect
-            </button>
-          </h2>
-        </div>
-        <div id="careerCollapseFive" class="collapse" data-parent="#careersAccordion">
+      <!-- Career 5: Network Engineer -->
+      <div class="col-md-4">
+        <div class="card career-card" data-toggle="modal" data-target="#careerModal5">
           <div class="card-body">
-            Designing computer networks or telecom systems involves routing protocols and reliability, which rely on graph concepts.
-            A bachelor’s in network engineering or CS plus certifications (e.g., Cisco) is typical.
+            <h5 class="card-title">Network Engineer</h5>
+            <p class="card-text">Build and manage computer networks with graph ideas.</p>
           </div>
         </div>
       </div>
-
-      <div class="card">
-        <div class="card-header" id="careerHeadingSix">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#careerCollapseSix">
-              Operations Research Analyst / Optimization Specialist
-            </button>
-          </h2>
-        </div>
-        <div id="careerCollapseSix" class="collapse" data-parent="#careersAccordion">
+      <!-- Career 6: Operations Research Analyst -->
+      <div class="col-md-4">
+        <div class="card career-card" data-toggle="modal" data-target="#careerModal6">
           <div class="card-body">
-            Solving logistical puzzles (like airline scheduling or supply chain routing) often uses graph-based optimization.
-            A degree in operations research, industrial engineering, or applied math is common.
+            <h5 class="card-title">Operations Research Analyst</h5>
+            <p class="card-text">Solve planning puzzles using graphs and math.</p>
           </div>
         </div>
       </div>
+    </div>
+  </div>
 
-      <div class="card">
-        <div class="card-header" id="careerHeadingSeven">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#careerCollapseSeven">
-              Bioinformatician / Computational Biologist
-            </button>
-          </h2>
+  <!-- Career Modals -->
+  <!-- Career Modal 1: Graph Theory Researcher -->
+  <div class="modal fade" id="careerModal1" tabindex="-1" role="dialog" aria-labelledby="careerModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="careerModalLabel1">Graph Theory Researcher</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-        <div id="careerCollapseSeven" class="collapse" data-parent="#careersAccordion">
-          <div class="card-body">
-            Studying biological networks (genes, proteins, diseases) often requires graph algorithms.
-            These roles typically have a biology background plus computational skills, often a master’s or PhD.
-          </div>
+        <div class="modal-body">
+          <p><strong>Job Title:</strong> Graph Theory Researcher / Professor</p>
+          <p><strong>Estimated Salary:</strong> $80,000 – $130,000 per year</p>
+          <p><strong>Education:</strong> PhD in Mathematics or Computer Science</p>
+          <p><strong>Job Description:</strong> Study the properties of graphs, prove new theorems, and teach at a college or university. Work may include writing research papers and mentoring students.</p>
         </div>
       </div>
+    </div>
+  </div>
 
-      <div class="card">
-        <div class="card-header" id="careerHeadingEight">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#careerCollapseEight">
-              Social Network Analyst / Quantitative Social Scientist
-            </button>
-          </h2>
+  <!-- Career Modal 2: Software Engineer -->
+  <div class="modal fade" id="careerModal2" tabindex="-1" role="dialog" aria-labelledby="careerModalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="careerModalLabel2">Software Engineer (Algorithms)</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-        <div id="careerCollapseEight" class="collapse" data-parent="#careersAccordion">
-          <div class="card-body">
-            Mapping and analyzing social networks is crucial in sociology, economics, and marketing.
-            A social science background with data analysis expertise is typical for these roles.
-          </div>
+        <div class="modal-body">
+          <p><strong>Job Title:</strong> Software Engineer – Graph Algorithms</p>
+          <p><strong>Estimated Salary:</strong> $70,000 – $120,000 per year</p>
+          <p><strong>Education:</strong> Bachelor’s or Master’s in Computer Science</p>
+          <p><strong>Job Description:</strong> Develop and optimize code using graph data structures and algorithms. Build features for maps, social networks, or search engines.</p>
         </div>
       </div>
+    </div>
+  </div>
 
-      <div class="card">
-        <div class="card-header" id="careerHeadingNine">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#careerCollapseNine">
-              Knowledge Graph Engineer / Semantic Web Developer
-            </button>
-          </h2>
+  <!-- Career Modal 3: Data Scientist -->
+  <div class="modal fade" id="careerModal3" tabindex="-1" role="dialog" aria-labelledby="careerModalLabel3" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="careerModalLabel3">Data Scientist / Network Analyst</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-        <div id="careerCollapseNine" class="collapse" data-parent="#careersAccordion">
-          <div class="card-body">
-            They build or maintain knowledge graphs (e.g. Google Knowledge Graph). 
-            A CS background with experience in SPARQL, RDF, or graph databases is essential, often combined with AI or data integration skills.
-          </div>
+        <div class="modal-body">
+          <p><strong>Job Title:</strong> Data Scientist – Network Analysis</p>
+          <p><strong>Estimated Salary:</strong> $75,000 – $130,000 per year</p>
+          <p><strong>Education:</strong> Bachelor’s in CS, Math, or Statistics (Master’s preferred)</p>
+          <p><strong>Job Description:</strong> Use graph theory and statistical tools to analyze networks. Work with tools like NetworkX or Neo4j to detect trends and patterns in big data.</p>
         </div>
       </div>
+    </div>
+  </div>
 
-      <div class="card">
-        <div class="card-header" id="careerHeadingTen">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#careerCollapseTen">
-              Actuary / Risk Analyst
-            </button>
-          </h2>
+  <!-- Career Modal 4: ML Engineer (GNN) -->
+  <div class="modal fade" id="careerModal4" tabindex="-1" role="dialog" aria-labelledby="careerModalLabel4" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="careerModalLabel4">Machine Learning Engineer (Graph Neural Networks)</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-        <div id="careerCollapseTen" class="collapse" data-parent="#careersAccordion">
-          <div class="card-body">
-            In insurance and finance, they may use network models to assess how risks interconnect.
-            A math/statistics background plus actuarial exams is typical for actuaries.
-          </div>
+        <div class="modal-body">
+          <p><strong>Job Title:</strong> ML Engineer – GNN Specialist</p>
+          <p><strong>Estimated Salary:</strong> $90,000 – $150,000 per year</p>
+          <p><strong>Education:</strong> Master’s or PhD in Computer Science or related field</p>
+          <p><strong>Job Description:</strong> Develop deep learning models that work on graph data. Apply GNNs to improve recommendations, detect fraud, or predict traffic. Work in research labs or tech companies.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Career Modal 5: Network Engineer -->
+  <div class="modal fade" id="careerModal5" tabindex="-1" role="dialog" aria-labelledby="careerModalLabel5" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="careerModalLabel5">Network Engineer</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Job Title:</strong> Network Engineer / Architect</p>
+          <p><strong>Estimated Salary:</strong> $65,000 – $110,000 per year</p>
+          <p><strong>Education:</strong> Bachelor’s in Computer Science or Network Engineering, plus certifications</p>
+          <p><strong>Job Description:</strong> Design, build, and maintain communication networks. Use graph theory to plan routes and improve network reliability.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Career Modal 6: Operations Research Analyst -->
+  <div class="modal fade" id="careerModal6" tabindex="-1" role="dialog" aria-labelledby="careerModalLabel6" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="careerModalLabel6">Operations Research Analyst</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Job Title:</strong> Operations Research Analyst</p>
+          <p><strong>Estimated Salary:</strong> $70,000 – $120,000 per year</p>
+          <p><strong>Education:</strong> Bachelor’s or Master’s in Operations Research, Industrial Engineering, or Applied Math</p>
+          <p><strong>Job Description:</strong> Use graph algorithms to solve routing and scheduling problems. Work to optimize supply chains and reduce costs.</p>
         </div>
       </div>
     </div>
