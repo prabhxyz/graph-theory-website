@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Graph Theory – Ethics</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- Fixed Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="index.html">Graph Theory</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -19,117 +19,119 @@
         <li class="nav-item"><a class="nav-link" href="index.html">Basics</a></li>
         <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
         <li class="nav-item"><a class="nav-link" href="technologies.html">Tech Uses</a></li>
-        <li class="nav-item"><a class="nav-link" href="interdisciplinary.html">Other Fields</a></li>
+        <li class="nav-item"><a class="nav-link" href="applications.html">Applications</a></li>
         <li class="nav-item"><a class="nav-link" href="impact.html">Impact</a></li>
         <li class="nav-item active"><a class="nav-link" href="ethics.html">Ethics</a></li>
         <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://docs.google.com/document/d/1wwV9UqL3FegHpGY-OXZt1PZuTjOh1jGQeJfcXixgmrU/edit?usp=sharing" target="_blank">References</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Main Content -->
   <div class="container mt-4">
-    <h1>Ethical Issues in Graph Theory</h1>
-    <p>
-      Even though graph theory is just math, its uses can raise ethical questions.
-      Here are some key points in simple words:
-    </p>
-    
+    <h1>Ethical Issues in Graph Theory Applications</h1>
+    <p>While graph theory is a neutral mathematical tool, its real-world uses raise important ethical questions.</p>
+
     <div class="accordion" id="ethicsAccordion">
-      <!-- Privacy and Consent -->
       <div class="card">
-        <div class="card-header" id="ethicsHeadingOne">
+        <div class="card-header" id="headingOne">
           <h2 class="mb-0">
-            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#ethicsCollapseOne">
-              Privacy and Consent
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne">
+              Privacy &amp; Consent
             </button>
           </h2>
         </div>
-        <div id="ethicsCollapseOne" class="collapse show" data-parent="#ethicsAccordion">
+        <div id="collapseOne" class="collapse show" data-parent="#ethicsAccordion">
           <div class="card-body">
-            Graphs can show personal connections. It is important to get people’s permission and protect their private data.
+            Graph-based data can reveal personal connections. Collecting or analyzing such data without permission can violate privacy.
+            Ethical codes require informed consent and secure handling of sensitive data.
           </div>
         </div>
       </div>
-      <!-- Surveillance and Civil Rights -->
+
       <div class="card">
-        <div class="card-header" id="ethicsHeadingTwo">
+        <div class="card-header" id="headingTwo">
           <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#ethicsCollapseTwo">
-              Surveillance and Civil Rights
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo">
+              Surveillance &amp; Civil Rights
             </button>
           </h2>
         </div>
-        <div id="ethicsCollapseTwo" class="collapse" data-parent="#ethicsAccordion">
+        <div id="collapseTwo" class="collapse" data-parent="#ethicsAccordion">
           <div class="card-body">
-            Graphs can be used to watch people. This may harm civil rights if done without proper rules.
+            Graph analytics can be used for mass surveillance, mapping who communicates with whom.
+            This risks infringing on civil liberties if done without oversight. Professionals must ensure respect for rights.
           </div>
         </div>
       </div>
-      <!-- Bias and Fairness -->
+
       <div class="card">
-        <div class="card-header" id="ethicsHeadingThree">
+        <div class="card-header" id="headingThree">
           <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#ethicsCollapseThree">
-              Bias and Fairness
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree">
+              Bias &amp; Fairness
             </button>
           </h2>
         </div>
-        <div id="ethicsCollapseThree" class="collapse" data-parent="#ethicsAccordion">
+        <div id="collapseThree" class="collapse" data-parent="#ethicsAccordion">
           <div class="card-body">
-            Graph algorithms might favor some groups over others. It is important to test and fix these biases.
+            Graph algorithms can reinforce biases if the underlying data is skewed. 
+            Ethical standards demand testing for unfair outcomes and adjusting models to ensure equity.
           </div>
         </div>
       </div>
-      <!-- Transparency and Accountability -->
+
       <div class="card">
-        <div class="card-header" id="ethicsHeadingFour">
+        <div class="card-header" id="headingFour">
           <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#ethicsCollapseFour">
-              Transparency and Accountability
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour">
+              Transparency &amp; Accountability
             </button>
           </h2>
         </div>
-        <div id="ethicsCollapseFour" class="collapse" data-parent="#ethicsAccordion">
+        <div id="collapseFour" class="collapse" data-parent="#ethicsAccordion">
           <div class="card-body">
-            It is important that systems using graphs explain how they work. People should know how decisions are made.
+            Users should know how graph-based decisions (like credit scoring or content ranking) are made.
+            Ensuring transparency and allowing appeals fosters accountability in algorithmic systems.
           </div>
         </div>
       </div>
-      <!-- Research Ethics -->
+
       <div class="card">
-        <div class="card-header" id="ethicsHeadingFive">
+        <div class="card-header" id="headingFive">
           <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#ethicsCollapseFive">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive">
               Research Ethics
             </button>
           </h2>
         </div>
-        <div id="ethicsCollapseFive" class="collapse" data-parent="#ethicsAccordion">
+        <div id="collapseFive" class="collapse" data-parent="#ethicsAccordion">
           <div class="card-body">
-            When studying graphs of people, researchers must be careful not to harm or expose personal data.
+            Academic or corporate research involving social graphs must follow IRB guidelines,
+            obtain consent, and anonymize data to protect participants from harm.
           </div>
         </div>
       </div>
-      <!-- Cybersecurity -->
+
       <div class="card">
-        <div class="card-header" id="ethicsHeadingSix">
+        <div class="card-header" id="headingSix">
           <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#ethicsCollapseSix">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix">
               Cybersecurity
             </button>
           </h2>
         </div>
-        <div id="ethicsCollapseSix" class="collapse" data-parent="#ethicsAccordion">
+        <div id="collapseSix" class="collapse" data-parent="#ethicsAccordion">
           <div class="card-body">
-            Graph systems can be attacked. Designers must plan for and prevent misuse.
+            Graph-based security tools can be powerful but risk misuse for invasive monitoring.
+            Responsible design and strict access controls help safeguard data and maintain trust.
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- JS Scripts -->
+  <!-- Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>

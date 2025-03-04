@@ -1,16 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Graph Theory – History</title>
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <style>
+    .timeline {
+      position: relative;
+      margin: 20px 0;
+      padding: 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #ccc;
+    }
+    .timeline-item {
+      position: relative;
+      margin: 20px 0;
+      padding-left: 50px;
+    }
+    .timeline-year {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 12px;
+      background: #fff;
+      border: 3px solid #3498db;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      top: 5px;
+    }
+  </style>
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- Fixed Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="index.html">Graph Theory</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -20,69 +56,72 @@
         <li class="nav-item"><a class="nav-link" href="index.html">Basics</a></li>
         <li class="nav-item active"><a class="nav-link" href="history.html">History</a></li>
         <li class="nav-item"><a class="nav-link" href="technologies.html">Tech Uses</a></li>
-        <li class="nav-item"><a class="nav-link" href="interdisciplinary.html">Other Fields</a></li>
+        <li class="nav-item"><a class="nav-link" href="applications.html">Applications</a></li>
         <li class="nav-item"><a class="nav-link" href="impact.html">Impact</a></li>
         <li class="nav-item"><a class="nav-link" href="ethics.html">Ethics</a></li>
         <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://docs.google.com/document/d/1wwV9UqL3FegHpGY-OXZt1PZuTjOh1jGQeJfcXixgmrU/edit?usp=sharing" target="_blank">References</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Main Content -->
   <div class="container mt-4">
     <h1>History of Graph Theory</h1>
-    <p>This page tells the story of graph theory in simple words.</p>
-
-    <div id="historyAccordion">
-      <!-- Euler and the Seven Bridges -->
-      <div class="card">
-        <div class="card-header" id="headingOne">
-          <h2 class="mb-0">
-            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne">
-              Early Days: Euler and the Seven Bridges
-            </button>
-          </h2>
-        </div>
-        <div id="collapseOne" class="collapse show" data-parent="#historyAccordion">
-          <div class="card-body">
-            In 1736, Euler solved a puzzle about crossing seven bridges. He showed that you cannot cross each bridge only once. This was the start of graph theory.
-          </div>
+    <p>This timeline shows key moments in the development of graph theory.</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">1736</div>
+        <div class="timeline-content">
+          <h4>Euler and the Seven Bridges</h4>
+          <p>Leonhard Euler solved the puzzle of Königsberg's seven bridges, launching graph theory as a formal field.</p>
         </div>
       </div>
-      <!-- Cayley and Trees -->
-      <div class="card">
-        <div class="card-header" id="headingTwo">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo">
-              Cayley and Trees
-            </button>
-          </h2>
-        </div>
-        <div id="collapseTwo" class="collapse" data-parent="#historyAccordion">
-          <div class="card-body">
-            In 1857, Cayley studied trees (graphs with no loops) and counted them. His work helped use graphs in chemistry to show how molecules are built.
-          </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1857</div>
+        <div class="timeline-content">
+          <h4>Cayley and Trees</h4>
+          <p>Arthur Cayley studied tree structures, linking chemistry and graph theory by counting possible molecular forms.</p>
         </div>
       </div>
-      <!-- 20th Century Growth -->
-      <div class="card">
-        <div class="card-header" id="headingThree">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree">
-              20th Century Growth
-            </button>
-          </h2>
+      <div class="timeline-item">
+        <div class="timeline-year">1878</div>
+        <div class="timeline-content">
+          <h4>The Term "Graph"</h4>
+          <p>James Sylvester used "graph" to describe chemical molecules, bridging mathematical concepts with chemistry.</p>
         </div>
-        <div id="collapseThree" class="collapse" data-parent="#historyAccordion">
-          <div class="card-body">
-            In the 1900s, graph theory grew a lot. Many books were written and new ideas came out. Graph theory helped many fields such as computer science and social studies.
-          </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1936</div>
+        <div class="timeline-content">
+          <h4>First Textbook</h4>
+          <p>Dénes Kőnig published the first dedicated graph theory textbook, consolidating earlier discoveries.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1969</div>
+        <div class="timeline-content">
+          <h4>Harary’s Work</h4>
+          <p>Frank Harary's textbook popularized graph theory in multiple domains, from chemistry to social science.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1976</div>
+        <div class="timeline-content">
+          <h4>Four Color Theorem</h4>
+          <p>Proved with computer assistance, it showed any map can be colored with at most four colors, using graph-theoretic ideas.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">Late 20th Century</div>
+        <div class="timeline-content">
+          <h4>Modern Era</h4>
+          <p>Graph theory expanded into computer science, algorithms, and network analysis, fueling the digital revolution.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- JS Scripts -->
+  <!-- Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>

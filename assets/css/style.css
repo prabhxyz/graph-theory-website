@@ -1,19 +1,63 @@
+/* Basic body and container setup */
 body {
-    padding-top: 60px;
-  }
-  
-  .container {
-    max-width: 800px;
-  }
-  
-  /* Optional custom styling for D3 graph elements */
-  .links line {
-    stroke: #999;
-    stroke-width: 2px;
-  }
-  
-  .nodes circle {
-    stroke: #fff;
-    stroke-width: 1.5px;
-  }
+  padding-top: 56px; /* Space for fixed navbar */
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 900px;
+}
+
+/* Interactive D3 Graph styling (used on index.html) */
+.links line {
+  stroke: #999;
+  stroke-width: 2px;
+}
+
+.nodes circle {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+  /* Timeline Styles */
+.timeline {
+  position: relative;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #ccc;
+}
+
+.timeline-item {
+  position: relative;
+  margin: 20px 0;
+  padding-left: 50px;
+}
+
+.timeline-year {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  background: #fff;
+  border: 3px solid #3498db;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  top: 5px;
+}
+
   

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graph Theory – Other Fields</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* We override body to remove normal scrolling and fix the navbar */
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* no vertical scroll */
+      font-family: Arial, sans-serif;
+    }
+
+    /* Fixed Navigation Bar at the top */
+    .navbar.fixed-top {
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+    }
+
+    /* The scroll instructions now at bottom-right */
+    .scroll-instructions {
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 5px;
+      z-index: 1000;
+      font-size: 1em;
+    }
+
+    /* Container for horizontal scrolling, placed below the navbar */
+    .horizontal-scroll-container {
+      position: absolute;
+      top: 56px; /* typical Bootstrap navbar height */
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 56px);
+      overflow: hidden;
+    }
+
+    /* Flex container for horizontal sections */
+    .horizontal-content {
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+
+    /* Each section is full viewport width */
+    .horizontal-section {
+      min-width: 100vw;
+      box-sizing: border-box;
+      padding: 40px;
+    }
+
+    .horizontal-section h2 {
+      margin-bottom: 20px;
+    }
+
+    .horizontal-section p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .bg-light {
+      background-color: #f8f9fa !important;
+    }
+    .bg-secondary {
+      background-color: #6c757d !important;
+    }
+    .text-white {
+      color: #fff !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Fixed Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="index.html">Graph Theory</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Basics</a></li>
+        <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
+        <li class="nav-item"><a class="nav-link" href="technologies.html">Tech Uses</a></li>
+        <li class="nav-item"><a class="nav-link" href="applications.html">Applications</a></li>
+        <li class="nav-item active"><a class="nav-link" href="impact.html">Impact</a></li>
+        <li class="nav-item"><a class="nav-link" href="ethics.html">Ethics</a></li>
+        <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://docs.google.com/document/d/1wwV9UqL3FegHpGY-OXZt1PZuTjOh1jGQeJfcXixgmrU/edit?usp=sharing" target="_blank">References</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Scroll instructions at bottom-right -->
+  <div class="scroll-instructions">
+    Use mouse wheel or trackpad to scroll horizontally →
+  </div>
+
+  <!-- Horizontal scroll container -->
+  <div class="horizontal-scroll-container">
+    <div class="horizontal-content">
+      <!-- Section 1: Introduction -->
+      <div class="horizontal-section bg-light">
+        <h2>Welcome to Other Fields</h2>
+        <p>
+          Graph theory is used far beyond computer science. 
+          As you scroll horizontally, you will see how it applies in mathematics, physics, chemistry, biology, social sciences, and more.
+        </p>
+      </div>
+
+      <!-- Section 2: Mathematics -->
+      <div class="horizontal-section bg-secondary text-white">
+        <h2>Mathematics</h2>
+        <p>
+          Graph theory began as a part of mathematics. Mathematicians study graphs to prove theorems about connectivity,
+          colorings (like the Four Color Theorem), and cycles. It also plays a big role in combinatorics,
+          helping count possible structures and solve complex problems in discrete math.
+        </p>
+        <p>
+          In modern research, mathematicians investigate advanced topics like graph minors, topological graph theory,
+          and algebraic graph theory, revealing deeper insights into how networks behave and how they can be characterized.
+        </p>
+      </div>
+
+      <!-- Section 3: Physics & Network Science -->
+      <div class="horizontal-section bg-light">
+        <h2>Physics &amp; Network Science</h2>
+        <p>
+          In physics, graphs model large, complex systems such as electrical grids, the power distribution network,
+          or even the structure of the internet. Network science grew out of statistical physics, focusing on
+          properties like scale-free networks (where some nodes have very high connectivity) or small-world networks
+          (where most nodes can be reached within a few steps).
+        </p>
+        <p>
+          Physicists use graph theory to understand how disruptions can cascade, how resilient a network is to failures,
+          and how certain patterns emerge naturally in real-world systems. This helps in designing robust infrastructures
+          and predicting phenomena like blackouts or traffic jams.
+        </p>
+      </div>
+
+      <!-- Section 4: Chemistry -->
+      <div class="horizontal-section bg-secondary text-white">
+        <h2>Chemistry</h2>
+        <p>
+          In chemistry, molecules are naturally viewed as graphs: atoms as nodes and bonds as edges.
+          This lets scientists enumerate possible compounds, predict their stability, and see how molecular structure
+          affects reactivity. 
+        </p>
+        <p>
+          Chemical graph theory also helps in computational chemistry, where software matches substructures
+          (like certain ring systems) to identify or design new drugs. These approaches date back to 19th-century work
+          by Cayley and Sylvester and continue to be crucial in modern drug discovery.
+        </p>
+      </div>
+
+      <!-- Section 5: Biology & Bioinformatics -->
+      <div class="horizontal-section bg-light">
+        <h2>Biology &amp; Bioinformatics</h2>
+        <p>
+          In biology, graphs appear everywhere: protein–protein interaction networks, gene regulatory networks,
+          neural networks in the brain, and food webs in ecology. Graph theory helps map these relationships
+          and identify key nodes (like essential genes or keystone species).
+        </p>
+        <p>
+          In bioinformatics, graph algorithms help assemble genomes (by connecting overlapping DNA reads),
+          detect functional modules in protein networks, and model how diseases spread. This interdisciplinary work
+          is crucial for medical research, epidemiology, and understanding complex life systems.
+        </p>
+      </div>
+
+      <!-- Section 6: Social Sciences -->
+      <div class="horizontal-section bg-secondary text-white">
+        <h2>Social Sciences</h2>
+        <p>
+          Social network analysis (SNA) uses graphs to represent how people or organizations connect. 
+          Sociologists, anthropologists, and political scientists map relationships to see who influences whom,
+          how information spreads, and how communities form or fragment.
+        </p>
+        <p>
+          Graph theory can reveal “hubs” of influence, detect hidden groups, or explain how social norms travel.
+          It underpins modern social media analytics, helping us understand phenomena like viral memes
+          or political mobilization on platforms like Twitter.
+        </p>
+      </div>
+
+      <!-- Section 7: Linguistics & Humanities -->
+      <div class="horizontal-section bg-light">
+        <h2>Linguistics &amp; Humanities</h2>
+        <p>
+          Linguists use graph models to parse syntax (sentence structures) and semantics (word meaning networks).
+          This can help build better natural language processing systems that understand grammar or sense relationships.
+        </p>
+        <p>
+          In the humanities, scholars map relationships among historical figures (who corresponded with whom),
+          track the spread of artistic movements, or even chart character interactions in literature.
+          Graph-based visualizations can reveal hidden patterns in historical or cultural data.
+        </p>
+      </div>
+
+      <!-- Section 8: Engineering & Infrastructure -->
+      <div class="horizontal-section bg-secondary text-white">
+        <h2>Engineering &amp; Infrastructure</h2>
+        <p>
+          Engineers design complex systems like computer networks, transportation routes, and power grids
+          using graph theory. Graph algorithms can optimize flow, reduce congestion, or find the most reliable
+          routes in a large-scale network.
+        </p>
+        <p>
+          For example, city planners use graph-based traffic models to time traffic lights or propose new roads.
+          Power companies model grids as graphs to monitor load distribution and quickly isolate faults.
+          These methods keep modern infrastructure efficient and resilient.
+        </p>
+      </div>
+
+      <!-- Section 9: Economics & Finance -->
+      <div class="horizontal-section bg-light">
+        <h2>Economics &amp; Finance</h2>
+        <p>
+          Economists and financial analysts use graph theory to study trade networks, financial markets,
+          and inter-bank lending. These networks can reveal how risk or shocks propagate, helping policymakers
+          prevent cascading failures (like the 2008 financial crisis).
+        </p>
+        <p>
+          Graphs also power recommendation systems in e-commerce, analyzing consumer–product links. 
+          In finance, fraud detection systems rely on network analysis to spot suspicious transaction patterns.
+        </p>
+      </div>
+
+      <!-- Section 10: Healthcare & Epidemiology -->
+      <div class="horizontal-section bg-secondary text-white">
+        <h2>Healthcare &amp; Epidemiology</h2>
+        <p>
+          Healthcare providers use graph models to map patient referrals, track disease outbreaks, and optimize
+          hospital workflows. Epidemiologists model contact networks to see how infections spread
+          and which interventions (like vaccination or social distancing) could break transmission chains.
+        </p>
+        <p>
+          These approaches proved critical during COVID-19, helping public health officials identify super-spreader
+          events and shape policy decisions to reduce community spread.
+        </p>
+      </div>
+
+      <!-- Section 11: Cybersecurity -->
+      <div class="horizontal-section bg-light">
+        <h2>Cybersecurity</h2>
+        <p>
+          Graphs help detect and prevent cyber threats by modeling devices, user accounts, and connections.
+          Attack graphs map all possible paths a hacker might take, letting security teams patch weaknesses.
+        </p>
+        <p>
+          Network analysis also helps identify anomalies in traffic patterns or user behaviors,
+          making it easier to spot intrusions, malware, or suspicious activities before they cause harm.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript to Map Mouse Wheel to Horizontal Translation -->
+  <script>
+    // Prevent default vertical scroll
+    window.addEventListener("wheel", function(e) {
+      e.preventDefault();
+    }, { passive: false });
+
+    const horizontalContent = document.querySelector('.horizontal-content');
+    let scrollPosition = 0;
+
+    window.addEventListener("wheel", function(e) {
+      // Use deltaY for horizontal movement
+      scrollPosition += e.deltaY;
+      // Max possible scroll
+      const maxScroll = horizontalContent.scrollWidth - window.innerWidth;
+      // Clamp
+      if (scrollPosition < 0) scrollPosition = 0;
+      if (scrollPosition > maxScroll) scrollPosition = maxScroll;
+      // Apply transform
+      horizontalContent.style.transform = 'translateX(-' + scrollPosition + 'px)';
+    });
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

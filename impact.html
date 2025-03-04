@@ -1,15 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Graph Theory – Impact</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <style>
+    /* For the 3D cube container */
+    .cube-container {
+      perspective: 1000px;
+      width: 400px;
+      height: 400px;
+      margin: 100px auto; /* center on page */
+      position: relative;
+    }
+
+    .cube {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 1s;
+    }
+
+    /* Each face of the cube */
+    .face {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: #ffffff;
+      border: 2px solid #ccc;
+      box-sizing: border-box;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Center face content nicely */
+    .face h2 {
+      margin-bottom: 10px;
+    }
+    .face p {
+      font-size: 1.05em;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    /* Positions for each face */
+    .face-front {
+      transform: translateZ(200px);
+    }
+    .face-back {
+      transform: rotateY(180deg) translateZ(200px);
+    }
+    .face-right {
+      transform: rotateY(90deg) translateZ(200px);
+    }
+    .face-left {
+      transform: rotateY(-90deg) translateZ(200px);
+    }
+    .face-top {
+      transform: rotateX(90deg) translateZ(200px);
+    }
+    .face-bottom {
+      transform: rotateX(-90deg) translateZ(200px);
+    }
+
+    /* Buttons to rotate the cube */
+    .controls {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .controls button {
+      margin: 0 10px;
+      padding: 10px 20px;
+    }
+
+    /* Fix the navbar at top */
+    .navbar.fixed-top {
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+    }
+  </style>
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- Fixed Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="index.html">Graph Theory</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -19,41 +97,128 @@
         <li class="nav-item"><a class="nav-link" href="index.html">Basics</a></li>
         <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
         <li class="nav-item"><a class="nav-link" href="technologies.html">Tech Uses</a></li>
-        <li class="nav-item"><a class="nav-link" href="interdisciplinary.html">Other Fields</a></li>
+        <li class="nav-item"><a class="nav-link" href="applications.html">Applications</a></li>
         <li class="nav-item active"><a class="nav-link" href="impact.html">Impact</a></li>
         <li class="nav-item"><a class="nav-link" href="ethics.html">Ethics</a></li>
         <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://docs.google.com/document/d/1wwV9UqL3FegHpGY-OXZt1PZuTjOh1jGQeJfcXixgmrU/edit?usp=sharing" target="_blank">References</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <div class="container mt-4">
-    <h1>Impact on Society, Culture, and the Economy</h1>
-    <p>Graph theory changes our world in many ways. Here are some simple ideas:</p>
-    
-    <h3>Social Connectivity</h3>
-    <p>Social networks like Facebook and Twitter are built on graphs. They show how people are connected and share ideas.</p>
-    
-    <h3>Knowledge Sharing</h3>
-    <p>The internet is like a giant graph of information. Graph theory helps us search and share knowledge easily.</p>
-    
-    <h3>Economic Benefits</h3>
-    <p>Companies use graphs to save time and money. For example, delivery services plan routes with graphs to save fuel.</p>
-    
-    <h3>Scientific Progress</h3>
-    <p>Graphs help scientists work together and spread new ideas faster. They also show which research is very important.</p>
-    
-    <h3>Global Connections</h3>
-    <p>Trade and communication use graphs to link countries and people. But if one important part fails, it can affect many others.</p>
-    
-    <h3>Negative Sides</h3>
-    <p>Sometimes graphs can be misused. For example, personal data in social networks may be used without permission,
-       hurting privacy and trust.</p>
+  <div class="container">
+    <h1 class="mt-4 text-center">Impact of Graph Theory</h1>
+    <p class="text-center">
+      Rotate the 3D cube to learn more about how graph theory shapes society, culture, and the economy.
+    </p>
+
+    <!-- 3D Cube Container -->
+    <div class="cube-container">
+      <div class="cube" id="impactCube">
+        <!-- Face 1: Social Connectivity -->
+        <div class="face face-front">
+          <h2>Social Connectivity</h2>
+          <p>
+            Social networks (like Facebook, Twitter) are massive graphs. They let ideas spread quickly, connect people worldwide, and influence social movements. 
+            However, they can also create echo chambers or privacy concerns.
+          </p>
+        </div>
+
+        <!-- Face 2: Knowledge Sharing -->
+        <div class="face face-right">
+          <h2>Knowledge Sharing</h2>
+          <p>
+            The World Wide Web is a giant directed graph. Algorithms like PageRank revolutionized information discovery. 
+            This democratization of knowledge powers the modern information economy but also raises challenges about information overload and misinformation.
+          </p>
+        </div>
+
+        <!-- Face 3: Economic Optimization -->
+        <div class="face face-back">
+          <h2>Economic Optimization</h2>
+          <p>
+            Companies use graph algorithms to optimize logistics, saving costs and resources. 
+            UPS’s ORION system, for example, cuts millions of driving miles. Graph-based supply chain models keep goods flowing efficiently around the globe.
+          </p>
+        </div>
+
+        <!-- Face 4: Scientific Progress -->
+        <div class="face face-left">
+          <h2>Scientific Progress</h2>
+          <p>
+            Citation networks and collaboration graphs help scientists track breakthroughs and identify key innovators. 
+            Graph-based analytics guide research funding, highlight influential papers, and foster interdisciplinary work.
+          </p>
+        </div>
+
+        <!-- Face 5: Global Connectivity & Inequality -->
+        <div class="face face-top">
+          <h2>Global Connectivity &amp; Inequality</h2>
+          <p>
+            Graph theory highlights which regions or communities are poorly connected, guiding infrastructure improvements. 
+            Yet, it also reveals digital divides: some parts of the world lack strong network links, causing gaps in opportunities.
+          </p>
+        </div>
+
+        <!-- Face 6: Negative Impacts &amp; Cautions -->
+        <div class="face face-bottom">
+          <h2>Negative Impacts &amp; Cautions</h2>
+          <p>
+            Graph-based analytics can be misused for surveillance or manipulative data mining (e.g., Cambridge Analytica scandal). 
+            Ethical guidelines stress privacy, fairness, and transparency to prevent harm and protect rights.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button id="prevBtn" class="btn btn-primary">Prev</button>
+      <button id="nextBtn" class="btn btn-success">Next</button>
+    </div>
   </div>
 
-  <!-- JS Scripts -->
+  <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    const cube = document.getElementById('impactCube');
+    let faceIndex = 0; // 0=front,1=right,2=back,3=left,4=top,5=bottom
+
+    function rotateCubeToFace(index) {
+      let xAngle = 0, yAngle = 0;
+      switch(index) {
+        case 0: // front
+          xAngle = 0; yAngle = 0;
+          break;
+        case 1: // right
+          xAngle = 0; yAngle = -90;
+          break;
+        case 2: // back
+          xAngle = 0; yAngle = -180;
+          break;
+        case 3: // left
+          xAngle = 0; yAngle = 90;
+          break;
+        case 4: // top
+          xAngle = -90; yAngle = 0;
+          break;
+        case 5: // bottom
+          xAngle = 90; yAngle = 0;
+          break;
+      }
+      cube.style.transform = `rotateX(${xAngle}deg) rotateY(${yAngle}deg)`;
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      faceIndex = (faceIndex + 1) % 6;
+      rotateCubeToFace(faceIndex);
+    });
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      faceIndex = (faceIndex - 1 + 6) % 6;
+      rotateCubeToFace(faceIndex);
+    });
+  </script>
 </body>
 </html>

@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Graph Theory – Tech Uses</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <style>
+    .card {
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+  </style>
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- Fixed Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="index.html">Graph Theory</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -19,147 +28,287 @@
         <li class="nav-item"><a class="nav-link" href="index.html">Basics</a></li>
         <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
         <li class="nav-item active"><a class="nav-link" href="technologies.html">Tech Uses</a></li>
-        <li class="nav-item"><a class="nav-link" href="interdisciplinary.html">Other Fields</a></li>
+        <li class="nav-item"><a class="nav-link" href="applications.html">Applications</a></li>
         <li class="nav-item"><a class="nav-link" href="impact.html">Impact</a></li>
         <li class="nav-item"><a class="nav-link" href="ethics.html">Ethics</a></li>
         <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://docs.google.com/document/d/1wwV9UqL3FegHpGY-OXZt1PZuTjOh1jGQeJfcXixgmrU/edit?usp=sharing" target="_blank">References</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Main Content -->
   <div class="container mt-4">
     <h1>Graph Theory in Technology</h1>
-    <p>
-      Graph theory is used in many modern technologies. Below are some examples in simple words.
-    </p>
-
-    <div class="accordion" id="techAccordion">
-      <!-- Web Search & PageRank -->
-      <div class="card">
-        <div class="card-header" id="techHeadingOne">
-          <h2 class="mb-0">
-            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#techCollapseOne">
-              Web Search &amp; PageRank
-            </button>
-          </h2>
-        </div>
-        <div id="techCollapseOne" class="collapse show" data-parent="#techAccordion">
+    <p>Click on each card to learn more about how graph theory is used in modern technology.</p>
+    <div class="row">
+      <!-- Card 1: Web Search & PageRank -->
+      <div class="col-md-4">
+        <div class="card mb-4" data-toggle="modal" data-target="#webSearchModal">
           <div class="card-body">
-            Search engines like Google use graph theory to rank pages. They see web pages as dots and links as lines.
+            <h5 class="card-title">Web Search &amp; PageRank</h5>
+            <p class="card-text">Google uses graph theory to rank pages by links.</p>
           </div>
         </div>
       </div>
-      <!-- Social Networks -->
-      <div class="card">
-        <div class="card-header" id="techHeadingTwo">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#techCollapseTwo">
-              Social Networks
-            </button>
-          </h2>
-        </div>
-        <div id="techCollapseTwo" class="collapse" data-parent="#techAccordion">
+      <!-- Card 2: Social Networks -->
+      <div class="col-md-4">
+        <div class="card mb-4" data-toggle="modal" data-target="#socialNetworksModal">
           <div class="card-body">
-            Social media sites like Facebook and Twitter are huge graphs of people and their links. They use graph ideas to find key people and groups.
+            <h5 class="card-title">Social Networks</h5>
+            <p class="card-text">Sites like Facebook and Twitter analyze networks of people.</p>
           </div>
         </div>
       </div>
-      <!-- Graph Databases & Knowledge Graphs -->
-      <div class="card">
-        <div class="card-header" id="techHeadingThree">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#techCollapseThree">
-              Graph Databases &amp; Knowledge Graphs
-            </button>
-          </h2>
-        </div>
-        <div id="techCollapseThree" class="collapse" data-parent="#techAccordion">
+      <!-- Card 3: Graph Databases & Knowledge Graphs -->
+      <div class="col-md-4">
+        <div class="card mb-4" data-toggle="modal" data-target="#graphDBModal">
           <div class="card-body">
-            Some databases store data as graphs. This makes it easy to find relationships quickly.
+            <h5 class="card-title">Graph Databases &amp; Knowledge Graphs</h5>
+            <p class="card-text">Store data as nodes and edges for quick relationships.</p>
           </div>
         </div>
       </div>
-      <!-- Graph Neural Networks -->
-      <div class="card">
-        <div class="card-header" id="techHeadingFour">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#techCollapseFour">
-              Graph Neural Networks (GNNs)
-            </button>
-          </h2>
-        </div>
-        <div id="techCollapseFour" class="collapse" data-parent="#techAccordion">
+      <!-- Card 4: Graph Neural Networks -->
+      <div class="col-md-4">
+        <div class="card mb-4" data-toggle="modal" data-target="#gnnModal">
           <div class="card-body">
-            GNNs are a type of deep learning that works on graph data. They help predict properties in networks like molecules or traffic.
+            <h5 class="card-title">Graph Neural Networks (GNNs)</h5>
+            <p class="card-text">AI that works on graph data for better predictions.</p>
           </div>
         </div>
       </div>
-      <!-- Routing & Logistics -->
-      <div class="card">
-        <div class="card-header" id="techHeadingFive">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#techCollapseFive">
-              Routing &amp; Logistics
-            </button>
-          </h2>
-        </div>
-        <div id="techCollapseFive" class="collapse" data-parent="#techAccordion">
+      <!-- Card 5: Routing & Logistics -->
+      <div class="col-md-4">
+        <div class="card mb-4" data-toggle="modal" data-target="#routingModal">
           <div class="card-body">
-            Navigation apps use graph theory to find the best routes. This helps companies save time and fuel.
+            <h5 class="card-title">Routing &amp; Logistics</h5>
+            <p class="card-text">Navigation apps plan routes with graph algorithms.</p>
           </div>
         </div>
       </div>
-      <!-- Network & Cybersecurity -->
-      <div class="card">
-        <div class="card-header" id="techHeadingSix">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#techCollapseSix">
-              Network &amp; Cybersecurity
-            </button>
-          </h2>
-        </div>
-        <div id="techCollapseSix" class="collapse" data-parent="#techAccordion">
+      <!-- Card 6: Network & Cybersecurity -->
+      <div class="col-md-4">
+        <div class="card mb-4" data-toggle="modal" data-target="#cyberModal">
           <div class="card-body">
-            Graph theory is used to design networks and to detect unusual activity in cybersecurity.
+            <h5 class="card-title">Network &amp; Cybersecurity</h5>
+            <p class="card-text">Detect unusual patterns in networks and prevent attacks.</p>
           </div>
         </div>
       </div>
-      <!-- Bioinformatics & Medicine -->
-      <div class="card">
-        <div class="card-header" id="techHeadingSeven">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#techCollapseSeven">
-              Bioinformatics &amp; Medicine
-            </button>
-          </h2>
-        </div>
-        <div id="techCollapseSeven" class="collapse" data-parent="#techAccordion">
+      <!-- Card 7: Bioinformatics & Medicine -->
+      <div class="col-md-4">
+        <div class="card mb-4" data-toggle="modal" data-target="#bioModal">
           <div class="card-body">
-            In biology and medicine, graphs show how proteins interact and how diseases spread.
+            <h5 class="card-title">Bioinformatics &amp; Medicine</h5>
+            <p class="card-text">Graphs show protein interactions and disease spread.</p>
           </div>
         </div>
       </div>
-      <!-- Blockchain & Recommendations -->
-      <div class="card">
-        <div class="card-header" id="techHeadingEight">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#techCollapseEight">
-              Blockchain &amp; Recommendations
-            </button>
-          </h2>
-        </div>
-        <div id="techCollapseEight" class="collapse" data-parent="#techAccordion">
+      <!-- Card 8: Blockchain & Recommendations -->
+      <div class="col-md-4">
+        <div class="card mb-4" data-toggle="modal" data-target="#blockchainModal">
           <div class="card-body">
-            Graph theory is used in blockchain to track transactions and in recommendation systems to show related items.
+            <h5 class="card-title">Blockchain &amp; Recommendations</h5>
+            <p class="card-text">Transactions & user-item links form complex graphs.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- JS Scripts -->
+  <!-- Modals -->
+  <!-- Modal 1: Web Search & PageRank -->
+  <div class="modal fade" id="webSearchModal" tabindex="-1" role="dialog" aria-labelledby="webSearchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="webSearchModalLabel">Web Search &amp; PageRank</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Search engines (like Google) see the web as a huge directed graph. Each page is a node, and each hyperlink is a directed edge.
+            Google’s PageRank algorithm measures a page’s importance by counting and evaluating the links pointing to it.
+          </p>
+          <p>
+            This graph-based approach was a breakthrough, moving beyond just keyword matching to analyze the entire link structure of the web.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Social Networks -->
+  <div class="modal fade" id="socialNetworksModal" tabindex="-1" role="dialog" aria-labelledby="socialNetworksModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="socialNetworksModalLabel">Social Networks</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Platforms like Facebook and Twitter are essentially massive social graphs.
+            Users are nodes, and friendships or “follows” are edges.
+          </p>
+          <p>
+            Graph algorithms identify key influencers (using centrality measures), recommend new connections, detect communities, and even fight spam or misinformation.
+            Advanced systems like Pinterest’s PinSage harness graph neural networks to understand billions of relationships.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Graph Databases & Knowledge Graphs -->
+  <div class="modal fade" id="graphDBModal" tabindex="-1" role="dialog" aria-labelledby="graphDBModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="graphDBModalLabel">Graph Databases &amp; Knowledge Graphs</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Graph databases (like Neo4j, Amazon Neptune) store data as nodes and relationships, making it easy to traverse connections in real time.
+            This is useful for recommendation engines, fraud detection, and more.
+          </p>
+          <p>
+            Knowledge graphs, such as Google’s Knowledge Graph, link data about people, places, and things. They enable “smart” queries by
+            capturing how entities relate (for example, “Paris is in France”).
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4: Graph Neural Networks -->
+  <div class="modal fade" id="gnnModal" tabindex="-1" role="dialog" aria-labelledby="gnnModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="gnnModalLabel">Graph Neural Networks (GNNs)</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            GNNs apply deep learning to graph-structured data. They learn from the connections as well as the features of each node and edge.
+          </p>
+          <p>
+            Companies use GNNs to predict traffic patterns (e.g., Google Maps), suggest content (Pinterest), or even detect fraud in financial networks.
+            In scientific research, GNNs help predict molecular properties in drug discovery.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5: Routing & Logistics -->
+  <div class="modal fade" id="routingModal" tabindex="-1" role="dialog" aria-labelledby="routingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="routingModalLabel">Routing &amp; Logistics</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Navigation apps use shortest-path algorithms (like Dijkstra’s or A*) to give directions.
+            Logistics companies (e.g. UPS) model deliveries as graph problems to minimize distance and fuel costs.
+          </p>
+          <p>
+            This optimization can save millions of miles and gallons of fuel, illustrating how graph theory has real economic and environmental impact.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 6: Network & Cybersecurity -->
+  <div class="modal fade" id="cyberModal" tabindex="-1" role="dialog" aria-labelledby="cyberModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cyberModalLabel">Network &amp; Cybersecurity</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Graph theory helps monitor and secure computer networks. Each device is a node, connections are edges.
+            Attack graphs show all possible paths an attacker might take, helping teams reinforce weak points.
+          </p>
+          <p>
+            Analyzing network traffic as a graph can reveal anomalies (like sudden spikes in connections),
+            assisting in early detection of intrusions or malware spread.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 7: Bioinformatics & Medicine -->
+  <div class="modal fade" id="bioModal" tabindex="-1" role="dialog" aria-labelledby="bioModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="bioModalLabel">Bioinformatics &amp; Medicine</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            In biology, networks of proteins, genes, or neurons are naturally modeled as graphs.
+            Bioinformaticians use graph algorithms to find critical nodes (e.g., essential proteins) or pathways for diseases.
+          </p>
+          <p>
+            During outbreaks (like COVID-19), epidemiologists use contact networks to trace infections,
+            applying graph theory to guide public health interventions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 8: Blockchain & Recommendations -->
+  <div class="modal fade" id="blockchainModal" tabindex="-1" role="dialog" aria-labelledby="blockchainModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="blockchainModalLabel">Blockchain &amp; Recommendations</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Blockchain systems can be seen as graphs of transactions or blocks linked together in a chain.
+            Understanding these structures helps verify integrity and track crypto networks.
+          </p>
+          <p>
+            Recommendation engines (like those used by Netflix or Amazon) often model users and items as bipartite graphs,
+            then use graph-based algorithms to find similarities and suggest relevant products.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

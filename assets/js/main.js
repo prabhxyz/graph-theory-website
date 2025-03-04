@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    console.log("Main JS loaded.");
-    // You can add additional interactive features here if needed.
-  });
-  
+  console.log("Main JS loaded.");
+  // Additional site-wide JS can go here.
+});
