@@ -1,0 +1,19 @@
+body {
+    padding-top: 60px;
+  }
+  
+  .container {
+    max-width: 800px;
+  }
+  
+  /* Optional custom styling for D3 graph elements */
+  .links line {
+    stroke: #999;
+    stroke-width: 2px;
+  }
+  
+  .nodes circle {
+    stroke: #fff;
+    stroke-width: 1.5px;
+  }
+  

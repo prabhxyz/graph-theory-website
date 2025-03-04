@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graph Theory – History</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Graph Theory</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Basics</a></li>
+        <li class="nav-item active"><a class="nav-link" href="history.html">History</a></li>
+        <li class="nav-item"><a class="nav-link" href="technologies.html">Tech Uses</a></li>
+        <li class="nav-item"><a class="nav-link" href="interdisciplinary.html">Other Fields</a></li>
+        <li class="nav-item"><a class="nav-link" href="impact.html">Impact</a></li>
+        <li class="nav-item"><a class="nav-link" href="ethics.html">Ethics</a></li>
+        <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container mt-4">
+    <h1>History of Graph Theory</h1>
+    <p>This page tells the story of graph theory in simple words.</p>
+
+    <div id="historyAccordion">
+      <!-- Euler and the Seven Bridges -->
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne">
+              Early Days: Euler and the Seven Bridges
+            </button>
+          </h2>
+        </div>
+        <div id="collapseOne" class="collapse show" data-parent="#historyAccordion">
+          <div class="card-body">
+            In 1736, Euler solved a puzzle about crossing seven bridges. He showed that you cannot cross each bridge only once. This was the start of graph theory.
+          </div>
+        </div>
+      </div>
+      <!-- Cayley and Trees -->
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo">
+              Cayley and Trees
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" data-parent="#historyAccordion">
+          <div class="card-body">
+            In 1857, Cayley studied trees (graphs with no loops) and counted them. His work helped use graphs in chemistry to show how molecules are built.
+          </div>
+        </div>
+      </div>
+      <!-- 20th Century Growth -->
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree">
+              20th Century Growth
+            </button>
+          </h2>
+        </div>
+        <div id="collapseThree" class="collapse" data-parent="#historyAccordion">
+          <div class="card-body">
+            In the 1900s, graph theory grew a lot. Many books were written and new ideas came out. Graph theory helped many fields such as computer science and social studies.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

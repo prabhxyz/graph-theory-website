@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graph Theory – Basics</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- D3.js for interactive graph -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Graph Theory</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active"><a class="nav-link" href="index.html">Basics</a></li>
+        <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
+        <li class="nav-item"><a class="nav-link" href="technologies.html">Tech Uses</a></li>
+        <li class="nav-item"><a class="nav-link" href="interdisciplinary.html">Other Fields</a></li>
+        <li class="nav-item"><a class="nav-link" href="impact.html">Impact</a></li>
+        <li class="nav-item"><a class="nav-link" href="ethics.html">Ethics</a></li>
+        <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container mt-4">
+    <h1>Graph Theory Basics</h1>
+    <p>
+      Graph theory is a part of math and computer science that studies graphs.
+      A graph shows how things are connected. It has dots (called <strong>vertices</strong>) and lines (called <strong>edges</strong>) that join the dots.
+    </p>
+
+    <!-- Interactive Graph Example -->
+    <div id="interactiveGraph" class="mb-4">
+      <h3>Interactive Graph Example</h3>
+      <p>Click on the dots to see more info.</p>
+      <svg width="600" height="400"></svg>
+    </div>
+
+    <h2>What is a Graph?</h2>
+    <p>
+      A graph is a simple picture that shows connections. Each dot represents an item,
+      and each line shows a relationship. Lines can be one-way or two-way and may have weights (numbers that show strength).
+    </p>
+
+    <h2>Basic Terms</h2>
+    <ul>
+      <li><strong>Vertex (Node):</strong> A dot in the graph.</li>
+      <li><strong>Edge (Link):</strong> A line connecting two dots.</li>
+      <li><strong>Path:</strong> A way to move from one dot to another by following lines.</li>
+      <li><strong>Connected Graph:</strong> A graph where every dot can be reached from any other.</li>
+      <li><strong>Tree:</strong> A connected graph with no loops.</li>
+      <li><strong>Cycle:</strong> A loop that starts and ends at the same dot.</li>
+    </ul>
+  </div>
+
+  <!-- JS Scripts -->
+  <script src="assets/js/interactiveGraph.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
